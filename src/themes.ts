@@ -1,6 +1,17 @@
 const gradient =
   "linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))";
 
+const font = {
+  family: "'Josefin Sans', sans-serif",
+  weight: {
+    regular: 400,
+    bold: 700,
+  },
+  size: {
+    regular: "18px",
+  },
+};
+
 export default {
   dark: {
     backgrounds: {
@@ -27,6 +38,7 @@ export default {
       todo: "hsl(237, 14%, 26%)", // very dark grayish blue - 2
       checkbox: gradient,
     },
+    font,
   },
   light: {
     backgrounds: {
@@ -53,5 +65,6 @@ export default {
       todo: "hsl(233, 11%, 84%)", // light grayish blue
       checkbox: gradient,
     },
+    font,
   },
 };
