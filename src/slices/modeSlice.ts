@@ -17,6 +17,7 @@ export const modeSlice = createSlice({
         ls.set<Mode>("mode", "dark");
         state = "dark";
       }
+      return state;
     },
   },
 });

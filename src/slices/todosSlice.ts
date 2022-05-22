@@ -18,12 +18,14 @@ export const todosSlice = createSlice({
         text: action.payload.text,
       });
       updateLS(state);
+      return state;
     },
 
     /** Remove a todo from the store */
     remove: (state, action: { payload: { id: string } }) => {
       state = state.filter((todo) => todo.id !== action.payload.id);
       updateLS(state);
+      return state;
     },
 
     /** Edit an existing todo's text */
@@ -31,6 +33,7 @@ export const todosSlice = createSlice({
       const todo = state.find((todo) => todo.id === action.payload.id);
       if (todo) todo.text = action.payload.text;
       updateLS(state);
+      return state;
     },
 
     /** Toggle an existing todo's status between active and completed */
@@ -38,6 +41,7 @@ export const todosSlice = createSlice({
       const todo = state.find((todo) => todo.id === action.payload.id);
       if (todo) todo.status = todo.status === "active" ? "completed" : "active";
       updateLS(state);
+      return state;
     },
   },
 });
