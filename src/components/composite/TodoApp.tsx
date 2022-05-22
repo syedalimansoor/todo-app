@@ -1,7 +1,7 @@
 import React from "react";
-import ToggleMode from "../atomic/ToggleMode";
-import CreateTodo from "./CreateTodo";
-import TodoList from "./TodoList";
+import ToggleMode from "$/components/atomic/ToggleMode";
+import CreateTodo from "$/components/composite/CreateTodo";
+import TodoList from "$/components/composite/TodoList";
 
 const TodoApp = () => {
   return (

@@ -1,5 +1,5 @@
-import { Mode } from "@/types";
-import ls from "@/utils/local-storage";
+import { Mode } from "$/types";
+import ls from "$/utils/local-storage";
 import { createSlice } from "@reduxjs/toolkit";
 
 const mode = ls.get<Mode>("mode");

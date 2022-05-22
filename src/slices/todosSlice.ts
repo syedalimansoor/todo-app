@@ -1,5 +1,5 @@
-import { Todo } from "@/types";
-import ls from "@/utils/local-storage";
+import { Todo } from "$/types";
+import ls from "$/utils/local-storage";
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
 

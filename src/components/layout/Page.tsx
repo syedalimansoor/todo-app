@@ -1,5 +1,5 @@
 import React from "react";
-import TodoApp from "../composite/TodoApp";
+import TodoApp from "$/components/composite/TodoApp";
 
 const Page = () => {
   return <TodoApp />;

@@ -1,7 +1,7 @@
 import React from "react";
-import RemoveTodo from "../atomic/RemoveTodo";
-import TodoStatus from "../atomic/TodoStatus";
-import TodoText from "../atomic/TodoText";
+import RemoveTodo from "$/components/atomic/RemoveTodo";
+import TodoStatus from "$/components/atomic/TodoStatus";
+import TodoText from "$/components/atomic/TodoText";
 
 const TodoItem = () => {
   return (

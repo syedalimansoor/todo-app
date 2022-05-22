@@ -1,8 +1,8 @@
 import React from "react";
-import ClearTodos from "../atomic/ClearTodos";
-import FilterTodos from "../atomic/FilterTodos";
-import TodosLeft from "../atomic/TodosLeft";
-import TodoItem from "./TodoItem";
+import TodoItem from "$/components/composite/TodoItem";
+import TodosLeft from "$/components/atomic/TodosLeft";
+import FilterTodos from "$/components/atomic/FilterTodos";
+import ClearTodos from "$/components/atomic/ClearTodos";
 
 const TodoList = () => {
   return (
