@@ -12,6 +12,11 @@ const font = {
   },
 };
 
+const breakpoints = {
+  mobile: "375px",
+  tablet: "768px",
+};
+
 export default {
   dark: {
     backgrounds: {
@@ -39,6 +44,7 @@ export default {
       checkbox: gradient,
     },
     font,
+    breakpoints,
   },
   light: {
     backgrounds: {
@@ -66,5 +72,6 @@ export default {
       checkbox: gradient,
     },
     font,
+    breakpoints,
   },
 };
