@@ -4,8 +4,12 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { modeSelector } from "$/slices/modeSlice";
 import themes from "$/themes";
 
-type ThemeProps = { theme: typeof themes["dark"] & typeof themes["light"] };
-const GlobalStyle = createGlobalStyle<ThemeProps>`
+export type Theme = typeof themes["dark"] & typeof themes["light"];
+export type ThemeProp = {
+  theme: Theme;
+};
+
+const GlobalStyle = createGlobalStyle<ThemeProp>`
 :root {
   font-family: ${(props) => props.theme.font.family};
   font-size: ${(props) => props.theme.font.size.regular};
