@@ -1,3 +1,4 @@
+import { RootState } from "$/store";
 import { Mode } from "$/types";
 import ls from "$/utils/local-storage";
 import { createSlice } from "@reduxjs/toolkit";
@@ -21,4 +22,5 @@ export const modeSlice = createSlice({
 });
 
 export const { toggle } = modeSlice.actions;
+export const selectMode = (state: RootState) => state.mode;
 export default modeSlice.reducer;

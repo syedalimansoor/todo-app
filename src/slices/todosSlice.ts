@@ -1,3 +1,4 @@
+import { RootState } from "$/store";
 import { Todo } from "$/types";
 import ls from "$/utils/local-storage";
 import { createSlice } from "@reduxjs/toolkit";
@@ -42,6 +43,7 @@ export const todosSlice = createSlice({
 });
 
 export const { add, remove, edit, toggleStatus } = todosSlice.actions;
+export const selectTodos = (state: RootState) => state.todos;
 export default todosSlice.reducer;
 
 function updateLS(state: Todo[]) {
