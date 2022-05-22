@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Mode } from "../types";
 import * as ls from "local-storage";
+import { Mode } from "../types";
 
 const mode = ls.get<Mode | null>("mode");
 
