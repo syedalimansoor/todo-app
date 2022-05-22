@@ -1,5 +1,7 @@
+import Page from "./components/layout/Page";
+
 function App() {
-  return <div className="App"></div>;
+  return <Page />;
 }
 
 export default App;
