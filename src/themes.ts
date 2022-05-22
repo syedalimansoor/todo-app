@@ -12,14 +12,14 @@ const font = {
   },
 };
 
-const breakpoints = {
+const breakpoint = {
   mobile: "375px",
   tablet: "768px",
 };
 
 export default {
   dark: {
-    backgrounds: {
+    background: {
       page: "hsl(235, 21%, 11%)", // very dark blue
       todo: "hsl(235, 24%, 19%)", // very dark desat blue
       checkbox: gradient,
@@ -39,15 +39,15 @@ export default {
         completed: "hsl(233, 14%, 35%)", // very dark grayish blue - 1
       },
     },
-    borders: {
+    border: {
       todo: "hsl(237, 14%, 26%)", // very dark grayish blue - 2
       checkbox: gradient,
     },
     font,
-    breakpoints,
+    breakpoint,
   },
   light: {
-    backgrounds: {
+    background: {
       page: "hsl(0, 0%, 98%)", // very light gray
       todo: "hsl(0, 0%, 100%)", // white
       checkbox: gradient,
@@ -67,11 +67,11 @@ export default {
         completed: "hsl(233, 11%, 84%)", // light grayish blue
       },
     },
-    borders: {
+    border: {
       todo: "hsl(233, 11%, 84%)", // light grayish blue
       checkbox: gradient,
     },
     font,
-    breakpoints,
+    breakpoint,
   },
 };
