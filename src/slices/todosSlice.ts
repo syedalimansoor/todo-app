@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import * as ls from "local-storage";
 import { v4 as uuid } from "uuid";
-import { Todo } from "../types";
+import { Todo } from "@/types";
 
 const todos = ls.get<Todo[] | null>("todos");
 
