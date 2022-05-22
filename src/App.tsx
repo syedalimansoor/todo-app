@@ -3,11 +3,7 @@ import { useSelector } from "react-redux";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { modeSelector } from "$/slices/modeSlice";
 import themes from "$/themes";
-
-export type Theme = typeof themes["dark"] & typeof themes["light"];
-export type ThemeProp = {
-  theme: Theme;
-};
+import { ThemeProp } from "$/types";
 
 const GlobalStyle = createGlobalStyle<ThemeProp>`
 :root {

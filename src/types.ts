@@ -12,3 +12,10 @@ export interface GlobalState {
   mode: Mode;
   todos: Todo[];
 }
+
+import themes from "$/themes";
+
+export type Theme = typeof themes["dark"] & typeof themes["light"];
+export type ThemeProp = {
+  theme: Theme;
+};
