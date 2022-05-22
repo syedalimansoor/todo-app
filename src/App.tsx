@@ -8,7 +8,7 @@ type ThemeProps = { theme: typeof themes["dark"] & typeof themes["light"] };
 const GlobalStyle = createGlobalStyle<ThemeProps>`
 :root {
   font-family: ${(props) => props.theme.font.family};
-  font-size: ${(props) => props.theme.font.size};
+  font-size: ${(props) => props.theme.font.size.regular};
   font-weight: ${(props) => props.theme.font.weight.regular};
   color: ${(props) => props.theme.text.secondary.default}
 }
