@@ -3,7 +3,7 @@ import ls from "@/utils/local-storage";
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
 
-const todos = ls.get<Todo[] | null>("todos");
+const todos = ls.get<Todo[]>("todos");
 
 export const todosSlice = createSlice({
   name: "todos",
