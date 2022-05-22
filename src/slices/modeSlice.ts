@@ -11,10 +11,11 @@ export const modeSlice = createSlice({
     toggle: (state) => {
       if (state === "dark") {
         ls.set<Mode>("mode", "light");
-        return "light";
+        state = "light";
+      } else {
+        ls.set<Mode>("mode", "dark");
+        state = "dark";
       }
-      ls.set<Mode>("mode", "dark");
-      return "dark";
     },
   },
 });
