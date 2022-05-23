@@ -32,6 +32,7 @@ const StyledPage = styled.div`
   position: relative;
   display: grid;
   justify-content: stretch;
+  justify-items: center;
   align-content: center;
   padding: 1.4rem;
 `;
@@ -40,6 +41,22 @@ const BackgroundImage = styled.img`
   position: absolute;
   inset-inline: 0;
   top: 0;
+  width: 100%;
+  height: 11.2rem;
+  object-fit: cover;
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    height: 16.7rem;
+  }
+`;
+
+const TodoAppWrapper = styled.div`
+  width: 100%;
+  max-width: 25rem;
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    max-width: 30rem;
+  }
 `;
 
 const Page = () => {
@@ -55,7 +72,9 @@ const Page = () => {
         />
         <BackgroundImage src={backgrounds.mobile[mode]} alt="" />
       </picture>
-      <TodoApp />
+      <TodoAppWrapper>
+        <TodoApp />
+      </TodoAppWrapper>
     </StyledPage>
   );
 };
