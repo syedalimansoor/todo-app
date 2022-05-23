@@ -30,6 +30,7 @@ const StyledPage = styled.div`
   min-height: 100vh;
   transition: 200ms ease;
   position: relative;
+  z-index: -1;
   display: grid;
   justify-content: stretch;
   justify-items: center;
@@ -38,6 +39,7 @@ const StyledPage = styled.div`
 `;
 
 const BackgroundImage = styled.img`
+  z-index: -1;
   position: absolute;
   inset-inline: 0;
   top: 0;
