@@ -34,8 +34,8 @@ const StyledPage = styled.div`
   display: grid;
   justify-content: stretch;
   justify-items: center;
-  align-content: center;
-  padding: 1.4rem;
+  align-content: start;
+  padding: 2.8rem 1.4rem;
 `;
 
 const BackgroundImage = styled.img`
