@@ -1,8 +1,8 @@
 import Page from "$/components/layout/Page";
-import { useSelector } from "react-redux";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { useAppSelector } from "$/hooks";
 import { modeSelector } from "$/slices/modeSlice";
 import themes from "$/themes";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const mode = useSelector(modeSelector);
+  const mode = useAppSelector(modeSelector);
   const theme = themes[mode];
 
   return (
