@@ -44,7 +44,7 @@ const DisplayCheckboxWrapper = styled.div`
     content: "";
     position: absolute;
     inset: 1px;
-    background-color: white;
+    background-color: ${(props) => props.theme.background.todo};
     clip-path: circle(50% at 50% 50%);
     border-radius: 99em;
     z-index: -1;
