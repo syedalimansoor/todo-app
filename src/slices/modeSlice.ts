@@ -9,6 +9,7 @@ export const modeSlice = createSlice({
   name: "mode",
   initialState: (mode || "light") as Mode,
   reducers: {
+    /** Toggle the mode between light and dark */
     toggle: (state) => {
       if (state === "dark") {
         ls.set<Mode>("mode", "light");
