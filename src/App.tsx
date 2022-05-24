@@ -3,9 +3,8 @@ import { useSelector } from "react-redux";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { modeSelector } from "$/slices/modeSlice";
 import themes from "$/themes";
-import { ThemeProp } from "$/types";
 
-const GlobalStyle = createGlobalStyle<ThemeProp>`
+const GlobalStyle = createGlobalStyle`
 :root {
   font-family: ${(props) => props.theme.font.family};
   font-size: ${(props) => props.theme.font.size.regular};
