@@ -16,6 +16,6 @@ export interface GlobalState {
 import themes from "$/themes";
 
 export type Theme = typeof themes["dark"] & typeof themes["light"];
-export type ThemeProp = {
+export interface ThemeProps {
   theme: Theme;
-};
+}
