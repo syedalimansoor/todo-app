@@ -36,6 +36,10 @@ const StyledPage = styled.div`
   justify-items: center;
   align-content: start;
   padding: 2.8rem 1.4rem;
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    padding-block: 4.2rem;
+  }
 `;
 
 const BackgroundImage = styled.img`
