@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, useState } from "react";
+import React, { ChangeEventHandler, MouseEventHandler, useState } from "react";
 import RemoveTodo from "$/components/atomic/RemoveTodo";
 import TodoStatus from "$/components/atomic/TodoStatus";
 import TodoText from "$/components/atomic/TodoText";
@@ -19,11 +19,15 @@ const CreateTodo = () => {
     setText(evt.target.value);
   };
 
+  const handleClearText: MouseEventHandler<HTMLButtonElement> = () => {
+    setText("");
+  };
+
   return (
     <Wrapper>
       <TodoStatus />
       <TodoText text={text} onChange={handleTextChange} />
-      <RemoveTodo />
+      <RemoveTodo show={!!text} onClick={handleClearText} />
     </Wrapper>
   );
 };
