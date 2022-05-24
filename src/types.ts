@@ -6,7 +6,8 @@ export interface Todo {
 
 export type Mode = "dark" | "light";
 
-export type Filter = "all" | "active" | "completed";
+export type TodoStatus = "active" | "completed";
+export type Filter = "all" | TodoStatus;
 
 export interface GlobalState {
   mode: Mode;
