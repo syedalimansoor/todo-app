@@ -41,6 +41,7 @@ const AppFooter = styled.small`
   align-self: center;
   color: ${(props) => props.theme.text.secondary.default};
   font-size: 0.8rem;
+  transition: 200ms ease;
 `;
 
 const TodoApp = () => {
