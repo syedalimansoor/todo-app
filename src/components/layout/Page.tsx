@@ -30,7 +30,7 @@ const StyledPage = styled.div`
   min-height: 100vh;
   transition: 200ms ease;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   display: grid;
   justify-content: stretch;
   justify-items: center;
