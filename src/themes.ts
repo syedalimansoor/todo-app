@@ -59,8 +59,8 @@ export default {
         hover: "hsl(235, 19%, 35%)", // very dark grayish blue
       },
       secondary: {
-        default: "hsl(233, 11%, 84%)", // light grayish blue
-        hover: "hsl(236, 9%, 61%)", // dark grayish blue
+        default: "hsl(236, 9%, 61%)", // dark grayish blue
+        hover: "hsl(235, 19%, 35%)", // very dark grayish blue
       },
       todo: {
         default: "hsl(235, 19%, 35%)", // very dark grayish blue
