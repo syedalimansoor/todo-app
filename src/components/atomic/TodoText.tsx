@@ -1,9 +1,10 @@
-import React, { ChangeEventHandler, FC } from "react";
+import React, { ChangeEventHandler, FC, KeyboardEventHandler } from "react";
 import styled from "styled-components";
 
 interface Props {
   text?: string;
   onChange?: ChangeEventHandler<HTMLTextAreaElement>;
+  onKeyPress?: KeyboardEventHandler<HTMLTextAreaElement>;
 }
 
 const TextAreaWrapper = styled.label`
@@ -40,11 +41,12 @@ const TextArea = styled.textarea<{ height?: number }>`
   }
 `;
 
-const TodoText: FC<Props> = ({ text, onChange }) => {
+const TodoText: FC<Props> = ({ text, onChange, onKeyPress }) => {
   return (
     <TextAreaWrapper data-value={text}>
       <TextArea
         value={text}
+        onKeyPress={onKeyPress}
         onChange={onChange}
         rows={1}
         placeholder="Create a new todo..."
