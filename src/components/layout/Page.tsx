@@ -46,7 +46,7 @@ const BackgroundImage = styled.img`
   z-index: -1;
   position: absolute;
   inset-inline: 0;
-  top: 0;
+  inset-block-start: 0;
   width: 100%;
   height: 11.2rem;
   object-fit: cover;
