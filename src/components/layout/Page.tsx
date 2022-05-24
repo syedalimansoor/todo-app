@@ -1,9 +1,9 @@
 import React from "react";
 import TodoApp from "$/components/composite/TodoApp";
 import styled, { useTheme } from "styled-components";
-import { useSelector } from "react-redux";
 import { modeSelector } from "$/slices/modeSlice";
 import { Theme } from "$/types";
+import { useAppSelector } from "$/hooks";
 
 //#region import and setup backgrounds
 import desktop_dark from "$/assets/bg-desktop-dark.jpg";
@@ -66,7 +66,7 @@ const TodoAppWrapper = styled.div`
 `;
 
 const Page = () => {
-  const mode = useSelector(modeSelector);
+  const mode = useAppSelector(modeSelector);
   const theme = useTheme() as Theme;
 
   return (
