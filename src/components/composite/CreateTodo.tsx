@@ -50,8 +50,6 @@ const CreateTodo = () => {
     setText("");
   };
 
-  // TODO: Implement shift+enter to add line, enter to submit
-
   return (
     <Wrapper>
       <TodoStatus />
