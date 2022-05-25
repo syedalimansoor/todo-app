@@ -10,6 +10,7 @@ import RemoveTodo from "$/components/atomic/RemoveTodo";
 import TodoStatus from "$/components/atomic/TodoStatus";
 import TodoText from "$/components/atomic/TodoText";
 import styled from "styled-components";
+import { isDesktop, isMobile } from "react-device-detect";
 
 const Wrapper = styled.div`
   display: flex;
@@ -23,25 +24,34 @@ const CreateTodo = () => {
   const dispatch = useDispatch();
 
   const addTodo = () => {
-    dispatch(add({ text }));
-    setText("");
+    text && dispatch(add({ text }));
   };
 
   const handleTextChange: ChangeEventHandler<HTMLTextAreaElement> = (evt) => {
-    setText(evt.target.value);
+    if (isMobile && evt.target.value.slice(-1) === "\n") {
+      addTodo();
+      setText("");
+    } else {
+      setText(evt.target.value);
+    }
+  };
+
+  const handleKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = (evt) => {
+    if (isDesktop) {
+      if (!evt.shiftKey && evt.key.toLowerCase() === "enter") {
+        addTodo();
+        setText("");
+        evt.preventDefault();
+      }
+    }
+    console.log(evt);
   };
 
   const handleClearText: MouseEventHandler<HTMLButtonElement> = () => {
     setText("");
   };
 
-  const handleKeyPress: KeyboardEventHandler<HTMLTextAreaElement> = (evt) => {
-    if (evt.key === "Enter" && !evt.shiftKey) {
-      evt.preventDefault();
-      evt.stopPropagation();
-      addTodo();
-    }
-  };
+  // TODO: Implement shift+enter to add line, enter to submit
 
   return (
     <Wrapper>
@@ -49,7 +59,7 @@ const CreateTodo = () => {
       <TodoText
         text={text}
         onChange={handleTextChange}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyDown}
       />
       <RemoveTodo show={!!text} onClick={handleClearText} />
     </Wrapper>

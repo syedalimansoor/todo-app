@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface Props {
   text?: string;
   onChange?: ChangeEventHandler<HTMLTextAreaElement>;
-  onKeyPress?: KeyboardEventHandler<HTMLTextAreaElement>;
+  onKeyDown?: KeyboardEventHandler<HTMLTextAreaElement>;
 }
 
 const TextAreaWrapper = styled.label`
@@ -41,12 +41,12 @@ const TextArea = styled.textarea<{ height?: number }>`
   }
 `;
 
-const TodoText: FC<Props> = ({ text, onChange, onKeyPress }) => {
+const TodoText: FC<Props> = ({ text, onChange, onKeyDown }) => {
   return (
     <TextAreaWrapper data-value={text}>
       <TextArea
         value={text}
-        onKeyPress={onKeyPress}
+        onKeyDown={onKeyDown}
         onChange={onChange}
         rows={1}
         placeholder="Create a new todo..."
