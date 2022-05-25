@@ -44,7 +44,6 @@ const CreateTodo = () => {
         evt.preventDefault();
       }
     }
-    console.log(evt);
   };
 
   const handleClearText: MouseEventHandler<HTMLButtonElement> = () => {
