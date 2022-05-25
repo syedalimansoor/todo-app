@@ -17,12 +17,19 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    padding: 1.2rem;
+  }
 `;
 
 const Image = styled.img<{ show: boolean }>`
   opacity: ${(props) => (props.show ? 1 : 0)};
   transition: 200ms ease;
   width: 0.7rem;
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    width: 1rem;
+  }
 `;
 
 const RemoveTodo: FC<Props> = ({ onClick, show = true }) => {

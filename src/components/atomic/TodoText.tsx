@@ -27,6 +27,10 @@ const TextAreaWrapper = styled.label`
     overflow-wrap: break-word;
     visibility: hidden;
   }
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    font-size: 1rem;
+  }
 `;
 
 const TextArea = styled.textarea<{ height?: number; enterKeyHint?: string }>`
