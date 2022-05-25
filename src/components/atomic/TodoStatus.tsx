@@ -14,6 +14,10 @@ const CheckboxWrapper = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    padding: 1.2em;
+  }
 `;
 
 const CheckboxInput = styled.input.attrs({
@@ -49,6 +53,10 @@ const DisplayCheckboxWrapper = styled.div`
     border-radius: 99em;
     z-index: -1;
     transition: 200ms ease;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    width: 1.4em;
   }
 `;
 
