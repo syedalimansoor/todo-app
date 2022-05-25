@@ -29,7 +29,7 @@ const TextAreaWrapper = styled.label`
   }
 `;
 
-const TextArea = styled.textarea<{ height?: number }>`
+const TextArea = styled.textarea<{ height?: number; enterKeyHint?: string }>`
   resize: none;
   width: 100%;
   border: none;
@@ -50,6 +50,7 @@ const TodoText: FC<Props> = ({ text, onChange, onKeyDown }) => {
         onChange={onChange}
         rows={1}
         placeholder="Create a new todo..."
+        enterKeyHint="done"
       />
     </TextAreaWrapper>
   );
