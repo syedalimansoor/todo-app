@@ -11,7 +11,7 @@ const TextAreaWrapper = styled.label`
   flex-grow: 1;
   display: grid;
   align-content: center;
-  padding-block: 0.5em;
+  padding-block: 0.8em;
   font-size: 0.7rem;
 
   & > *,
