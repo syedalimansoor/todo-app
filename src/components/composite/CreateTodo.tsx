@@ -17,6 +17,8 @@ const Wrapper = styled.div`
   align-items: stretch;
   background-color: ${(props) => props.theme.background.todo};
   border-radius: 0.2rem;
+
+  transition: 200ms ease;
 `;
 
 const CreateTodo = () => {

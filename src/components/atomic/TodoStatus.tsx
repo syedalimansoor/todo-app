@@ -48,7 +48,7 @@ const DisplayCheckboxWrapper = styled.div`
     clip-path: circle(50% at 50% 50%);
     border-radius: 99em;
     z-index: -1;
-    transition: clip-path 200ms ease;
+    transition: 200ms ease;
   }
 `;
 
