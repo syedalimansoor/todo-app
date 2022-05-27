@@ -58,18 +58,21 @@ const TodoList = () => {
   const filteredTodos =
     filter === "all" ? todos : todos.filter((todo) => todo.status === filter);
 
-  const listBody = useRef<HTMLDivElement>(null);
+  const firstLoad = useRef(true);
 
-  // TODO: Implement sortable list
-  // useEffect(() => {
-  //   listBody.current && new Sortable(listBody.current, { animation: 200 });
-  // }, []);
+  useEffect(() => {
+    firstLoad.current = false;
+  });
 
   return (
     <ListWrapper>
-      <ListBody ref={listBody}>
-        {filteredTodos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} />
+      <ListBody>
+        {filteredTodos.map((todo, idx) => (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            idx={firstLoad.current ? idx : 0}
+          />
         ))}
       </ListBody>
       <ListFooter>

@@ -3,22 +3,34 @@ import RemoveTodo from "$/components/atomic/RemoveTodo";
 import TodoStatus from "$/components/atomic/TodoStatus";
 import TodoText from "$/components/atomic/TodoText";
 import { Todo } from "$/types";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useDispatch } from "react-redux";
 import { edit, remove, toggleStatus } from "$/slices/todosSlice";
 import { isDesktop } from "react-device-detect";
 
 interface Props {
   todo: Todo;
+  idx: number;
 }
 
-const Wrapper = styled.div`
+const rise = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(2em)
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const Wrapper = styled.div<{ idx: number }>`
   display: flex;
   border-block-end: 1px solid ${(props) => props.theme.border.todo};
   transition: 200ms ease;
+  animation: ${rise} 500ms ease-out ${(props) => props.idx * 100}ms both;
 `;
 
-const TodoItem: FC<Props> = ({ todo }) => {
+const TodoItem: FC<Props> = ({ todo, idx }) => {
   const dispatch = useDispatch();
 
   const [showButton, setShowButton] = useState(false);
@@ -35,6 +47,7 @@ const TodoItem: FC<Props> = ({ todo }) => {
     <Wrapper
       onMouseEnter={() => isDesktop && setShowButton(true)}
       onMouseLeave={() => isDesktop && setShowButton(false)}
+      idx={idx}
     >
       <TodoStatus
         status={todo.status}
