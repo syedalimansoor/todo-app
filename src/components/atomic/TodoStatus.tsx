@@ -39,6 +39,7 @@ const DisplayCheckboxWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   ${CheckboxInput}:checked ~ &::after {
     clip-path: circle(0% at 50% 50%);

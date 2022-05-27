@@ -43,6 +43,7 @@ const AppFooter = styled.small`
   color: ${(props) => props.theme.text.secondary.default};
   font-size: 0.8rem;
   transition: 200ms ease;
+  margin-block-start: 4rem;
 `;
 
 const TodoApp = () => {
