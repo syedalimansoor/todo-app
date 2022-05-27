@@ -27,6 +27,11 @@ const ListFooter = styled.div`
   justify-content: space-between;
   font-size: 0.7rem;
   padding: 0.8rem;
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    padding: 1.2rem;
+    font-size: 0.8rem;
+  }
 `;
 
 const FilterTodosWrapper = styled.div`
@@ -40,6 +45,10 @@ const FilterTodosWrapper = styled.div`
   background-color: ${(props) => props.theme.background.todo};
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: background-color 200ms ease;
+
+  @media (min-width: ${(props) => props.theme.breakpoint.tablet}) {
+    padding: 1.2rem;
+  }
 `;
 
 const TodoList = () => {
@@ -51,15 +60,16 @@ const TodoList = () => {
 
   const listBody = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    listBody.current && new Sortable(listBody.current, { animation: 200 });
-  }, []);
+  // TODO: Implement sortable list
+  // useEffect(() => {
+  //   listBody.current && new Sortable(listBody.current, { animation: 200 });
+  // }, []);
 
   return (
     <ListWrapper>
       <ListBody ref={listBody}>
         {filteredTodos.map((todo) => (
-          <TodoItem key={todo.id} />
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </ListBody>
       <ListFooter>
