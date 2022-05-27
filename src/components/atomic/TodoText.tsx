@@ -36,18 +36,12 @@ const TextAreaWrapper = styled.label`
 
 const TextArea = styled.textarea<{
   height?: number;
-  enterKeyHint?: string;
-  completed?: boolean;
 }>`
   resize: none;
   width: 100%;
   border: none;
   background-color: transparent;
-  color: ${(props) =>
-    props.completed
-      ? props.theme.text.todo.completed
-      : props.theme.text.todo.default};
-  text-decoration: ${(props) => (props.completed ? "line-through" : "none")};
+  color: ${(props) => props.theme.text.todo.default};
   overflow-x: hidden;
   transition: 200ms ease;
 
@@ -57,6 +51,11 @@ const TextArea = styled.textarea<{
 
   &:focus {
     outline: none;
+  }
+
+  &:disabled {
+    color: ${(props) => props.theme.text.todo.completed};
+    text-decoration: line-through;
   }
 `;
 
@@ -69,8 +68,6 @@ const TodoText: FC<Props> = ({ text, completed, onChange, onKeyDown }) => {
         onChange={onChange}
         rows={1}
         placeholder="Create a new todo..."
-        enterKeyHint="done"
-        completed={completed}
         disabled={completed}
       />
     </TextAreaWrapper>
