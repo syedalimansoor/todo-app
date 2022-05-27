@@ -4,7 +4,23 @@ import ls from "$/utils/local-storage";
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuid } from "uuid";
 
-const todos = ls.get<Todo[]>("todos");
+let todos = ls.get<Todo[]>("todos");
+todos ??= [
+  { id: uuid(), status: "active", text: "Welcome to Todo App" },
+  { id: uuid(), status: "active", text: "Add a todo or edit an existing one" },
+  { id: uuid(), status: "active", text: "Filter todos by their status" },
+  {
+    id: uuid(),
+    status: "active",
+    text: "Create multi-line todos\non desktops",
+  },
+  {
+    id: uuid(),
+    status: "active",
+    text: "Toggle between light and dark mode using the button on the top",
+  },
+  { id: uuid(), status: "completed", text: "End of introduction" },
+];
 
 export const todosSlice = createSlice({
   name: "todos",
