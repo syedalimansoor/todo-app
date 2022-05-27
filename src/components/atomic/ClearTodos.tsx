@@ -18,7 +18,9 @@ const Button = styled.button`
 const ClearTodos = () => {
   const dispatch = useDispatch();
   return (
-    <Button onClick={() => dispatch(removeCompleted())}>Clear completed</Button>
+    <Button onClick={() => dispatch(removeCompleted())} type="button">
+      Clear completed
+    </Button>
   );
 };
 
