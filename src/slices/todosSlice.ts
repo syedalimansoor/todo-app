@@ -43,10 +43,18 @@ export const todosSlice = createSlice({
       updateLS(state);
       return state;
     },
+
+    /** Removes completed todos */
+    removeCompleted: (state) => {
+      state = state.filter((todo) => todo.status !== "completed");
+      updateLS(state);
+      return state;
+    },
   },
 });
 
-export const { add, remove, edit, toggleStatus } = todosSlice.actions;
+export const { add, remove, edit, toggleStatus, removeCompleted } =
+  todosSlice.actions;
 export const todosSelector = (state: RootState) => state.todos;
 export default todosSlice.reducer;
 
