@@ -7,6 +7,7 @@ interface Props {
 }
 
 const StyledText = styled.span`
+  transition: 200ms ease;
   color: ${(props) => props.theme.text.secondary.default};
 `;
 
