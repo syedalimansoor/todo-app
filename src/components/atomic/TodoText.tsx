@@ -40,6 +40,10 @@ const TextArea = styled.textarea<{ height?: number; enterKeyHint?: string }>`
   background-color: transparent;
   color: ${(props) => props.theme.text.todo.default};
 
+  &::placeholder {
+    color: ${(props) => props.theme.text.secondary.default};
+  }
+
   &:focus {
     outline: none;
   }
