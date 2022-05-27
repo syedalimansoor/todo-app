@@ -1,7 +1,19 @@
-import React from "react";
+import { Todo } from "$/types";
+import React, { FC } from "react";
+import styled from "styled-components";
 
-const TodosLeft = () => {
-  return <div>TodosLeft</div>;
+interface Props {
+  list: Todo[];
+}
+
+const StyledText = styled.span`
+  color: ${(props) => props.theme.text.secondary.default};
+`;
+
+const TodosLeft: FC<Props> = ({ list }) => {
+  const nLeft = list.filter((todo) => todo.status === "active").length;
+
+  return <StyledText>{nLeft} items left</StyledText>;
 };
 
 export default TodosLeft;
