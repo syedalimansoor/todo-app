@@ -71,6 +71,7 @@ const TodoText: FC<Props> = ({ text, completed, onChange, onKeyDown }) => {
         placeholder="Create a new todo..."
         enterKeyHint="done"
         completed={completed}
+        disabled={completed}
       />
     </TextAreaWrapper>
   );
