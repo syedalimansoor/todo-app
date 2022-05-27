@@ -14,7 +14,11 @@ const StyledText = styled.span`
 const TodosLeft: FC<Props> = ({ list }) => {
   const nLeft = list.filter((todo) => todo.status === "active").length;
 
-  return <StyledText>{nLeft} items left</StyledText>;
+  return (
+    <StyledText>
+      {nLeft} item{nLeft === 1 ? "" : "s"} left
+    </StyledText>
+  );
 };
 
 export default TodosLeft;
