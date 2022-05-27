@@ -5,7 +5,7 @@ interface Props {
   text?: string;
   onChange?: ChangeEventHandler<HTMLTextAreaElement>;
   onKeyDown?: KeyboardEventHandler<HTMLTextAreaElement>;
-  strikethrough?: boolean;
+  completed?: boolean;
 }
 
 const TextAreaWrapper = styled.label`
@@ -37,18 +37,17 @@ const TextAreaWrapper = styled.label`
 const TextArea = styled.textarea<{
   height?: number;
   enterKeyHint?: string;
-  strikethrough?: boolean;
+  completed?: boolean;
 }>`
   resize: none;
   width: 100%;
   border: none;
   background-color: transparent;
   color: ${(props) =>
-    props.strikethrough
+    props.completed
       ? props.theme.text.todo.completed
       : props.theme.text.todo.default};
-  text-decoration: ${(props) =>
-    props.strikethrough ? "line-through" : "none"};
+  text-decoration: ${(props) => (props.completed ? "line-through" : "none")};
   overflow-x: hidden;
   transition: 200ms ease;
 
@@ -61,7 +60,7 @@ const TextArea = styled.textarea<{
   }
 `;
 
-const TodoText: FC<Props> = ({ text, strikethrough, onChange, onKeyDown }) => {
+const TodoText: FC<Props> = ({ text, completed, onChange, onKeyDown }) => {
   return (
     <TextAreaWrapper data-value={text}>
       <TextArea
@@ -71,7 +70,7 @@ const TodoText: FC<Props> = ({ text, strikethrough, onChange, onKeyDown }) => {
         rows={1}
         placeholder="Create a new todo..."
         enterKeyHint="done"
-        strikethrough={strikethrough}
+        completed={completed}
       />
     </TextAreaWrapper>
   );
