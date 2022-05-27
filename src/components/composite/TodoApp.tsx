@@ -35,6 +35,7 @@ const Logo = styled.h1`
 const AppBody = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 `;
 
 const AppFooter = styled.small`
