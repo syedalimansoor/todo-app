@@ -38,14 +38,6 @@ const AppBody = styled.div`
   gap: 1rem;
 `;
 
-const AppFooter = styled.small`
-  align-self: center;
-  color: ${(props) => props.theme.text.secondary.default};
-  font-size: 0.8rem;
-  transition: 200ms ease;
-  margin-block-start: 4rem;
-`;
-
 const TodoApp = () => {
   return (
     <App>
@@ -57,7 +49,6 @@ const TodoApp = () => {
         <CreateTodo />
         <TodoList />
       </AppBody>
-      <AppFooter>Drag and drop to reorder list</AppFooter>
     </App>
   );
 };
