@@ -39,6 +39,7 @@ const TextArea = styled.textarea<{ height?: number; enterKeyHint?: string }>`
   border: none;
   background-color: transparent;
   color: ${(props) => props.theme.text.todo.default};
+  overflow-x: hidden;
 
   &::placeholder {
     color: ${(props) => props.theme.text.secondary.default};
