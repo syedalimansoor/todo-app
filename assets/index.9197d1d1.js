@@ -215,6 +215,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   align-items: stretch;
   background-color: ${e=>e.theme.background.todo};
   border-radius: 0.2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
   transition: 200ms ease;
 `,iS=()=>{const[e,t]=ne.exports.useState(""),n=Ml(),r=()=>{e&&n(vv({text:e}))};return St(rS,{children:[Q(Am,{}),Q(Nm,{text:e,onChange:u=>{nS&&u.target.value.slice(-1)===`
