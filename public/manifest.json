@@ -6,18 +6,19 @@
   "author": "Syed Ali Mansoor",
   "icons": [
     {
-      "src": "/logo@512.png",
+      "src": "./logo@512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/logo@192.png",
+      "src": "./logo@192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
   ],
   "start_url": "/todo-app/?source=pwa",
   "id": "/todo-app/?source=pwa",
+  "scope": "/todo-app/",
   "background_color": "#FFFFFF",
   "theme_color": "#3F7EFD",
   "display": "standalone",

@@ -11,4 +11,5 @@ export default defineConfig({
     },
   },
   base: "/todo-app/",
+  publicDir: "public",
 });
