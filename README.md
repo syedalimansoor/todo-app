@@ -28,7 +28,8 @@ Welcome! This is a Todo app built for a coding challenge on [Frontend Mentor](ht
 
 **Desktop**
 
-![desktop view](./screenshots/desktop.jpeg)
+![desktop dark theme view](./screenshots/desktop-dark.jpeg)
+![desktop light theme view](./screenshots/desktop-light.jpeg)
 
 **Mobile**
 
