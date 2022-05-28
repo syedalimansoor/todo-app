@@ -35,4 +35,4 @@ Welcome! This is a Todo app built for a coding challenge on [Frontend Mentor](ht
 
 ![mobile view](./screenshots/mobile.jpeg)
 
-Do check the app out and leave your reviews [here]()!
+Do check the app out and leave your reviews [here](https://www.frontendmentor.io/solutions/todo-app-react-redux-typescript-styledcomponents-vite-sQq0ISoM4b)!
