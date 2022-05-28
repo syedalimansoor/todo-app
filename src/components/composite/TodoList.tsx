@@ -7,7 +7,6 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { todosSelector } from "$/slices/todosSlice";
 import { Filter } from "$/types";
-import Sortable from "sortablejs";
 
 const ListWrapper = styled.div`
   display: flex;
