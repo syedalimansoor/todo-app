@@ -20,6 +20,6 @@
     },
     "baseUrl": "./"
   },
-  "include": ["src"],
+  "include": ["src", "public/registerServiceWorker.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
