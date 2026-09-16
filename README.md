@@ -4,7 +4,7 @@
 
 Welcome! This is a Todo app built for a coding challenge on [Frontend Mentor](https://www.frontendmentor.io)
 
-[Experience it live](https://alimansoor-create.github.io/todo-app)
+[Experience it live](https://syedalimansoor.github.io/todo-app)
 
 ## Features
 
